@@ -1,0 +1,94 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+    <head>
+    <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+        <title>{% block title %}{% endblock title %}</title>
+    </head>
+
+    <body>
+        <nav class="nav-header" id="main-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="menu-content">
+                            <ul>
+                                <li><a href="#">Inicio</a></li>
+                                <li><a href="#">Proyectos</a></li>
+                                <li><a href="#">Sobre mi</a></li>
+                                <li><a href="#">Contacto</a></li>
+                            </ul>
+                        </div>
+                        <a href="#" id="menu-click" class="d-none">
+                            <img src="{% static 'img/hamburguesa-green.svg' %}" class="ico ico-black">
+                            <img src="{% static 'img/hamburguesa-white.svg' %}" class="ico ico-white">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="overlay-menu"></div>
+        <div class="sidebar-wrapper" id="sidebar-wrapper">
+            <img src="{% static 'img/close-hamburger.svg' %}" class="close-menu" />
+            <div class="bloque-1">
+                <ul class="p-0">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Proyectos</a></li>
+                    <li><a href="#">Sobre mi</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="section-home">
+            <div class="container align-middle">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 class="main-title">Javier Casapia</h1>
+                        <h2 class="main-subtitle">Backend Developer</h2>
+                        <div class="social-links">
+                            <a href="#">
+                                <img src="{% static 'img/socials/github.svg' %}" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="{% static 'img/socials/linkedin.svg' %}" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {% block content %}{% endblock content %}
+
+        <section class="section-about">
+
+        </section>
+
+        <section class="section-contact">
+
+        </section>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+        <script src="{% static 'js/custom.js' %}"></script>
+    </body>
+
+</html>
