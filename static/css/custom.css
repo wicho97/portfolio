@@ -8,11 +8,19 @@
 
 /* Custom */
 
+.align-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
 .section-title {
     font-size: 60px;
     font-weight: 600;
     color: #2E3532;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .title-1 {
@@ -22,7 +30,6 @@
 
 .description-1 {
     color: #FFFFFF;
-    margin-bottom: 20px;
 }
 
 .button-1 {
@@ -236,14 +243,31 @@
 
 /* Menu */
 
-.align-middle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    /* Ajusta la altura al 100% para centrar verticalmente */
+/* Responsive - Menu */
+
+@media (max-width: 1200px) {
+    #main-nav {
+        height: 60px;
+        padding-top: 0px;
+    }
+
+    #main-nav .menu-content {
+        display: none;
+    }
+
+    #main-nav #menu-click {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    #menu-click,
+    #main-nav .bloque-logo-mobile {
+        display: inline-block !important;
+    }
 }
+
+/* Responsive - Menu */
 
 /* Section - Home */
 .section-home {
@@ -279,10 +303,25 @@
 
 /* Section - Home */
 
+
+/* Responsive - Section Home */
+
+@media (max-width: 1200px) {
+    .section-home .main-title {
+        font-size: 100px;
+    }
+
+    .section-home .main-subtitle {
+        font-size: 20px;
+    }
+}
+
+/* Responsive - Section Home */
+
 /* Section - Project */
 .section-project {
     background-color: #E0E2DB;
-    padding: 50px 0;
+    padding: 0 0 50px;
 }
 
 .section-project .box-width .row:nth-child(even) .col-6:nth-child(1) {
@@ -307,22 +346,11 @@
     border-radius: 10px;
 }
 
-/* Section - Project */
-
-/* Responsive - Section Home */
-
-@media (max-width: 1200px) {
-    .section-home .main-title {
-        font-size: 100px;
-    }
-
-    .section-home .main-subtitle {
-        font-size: 20px;
-    }
+.section-project .box-width .row:last-child.box-1:nth-child(2n) {
+    margin-bottom: 0 !important;
 }
 
-
-/* Responsive - Section Home */
+/* Section - Project */
 
 /* Responsive - Section Project */
 
@@ -346,24 +374,88 @@
 /* Responsive - Section Project */
 
 
-@media (max-width: 1200px) {
-    #main-nav {
-        height: 60px;
-        padding-top: 0px;
-    }
+/* Section - About */
 
-    #main-nav .menu-content {
-        display: none;
-    }
-
-    #main-nav #menu-click {
-        position: absolute;
-        right: 20px;
-        top: 20px;
-    }
-
-    #menu-click,
-    #main-nav .bloque-logo-mobile {
-        display: inline-block !important;
-    }
+.section-about {
+    background-color: #E0E2DB;
+    padding: 50px 0 0;
 }
+
+.section-about .main-title {
+    font-size: 120px;
+    color: #D3EFBD;
+}
+
+.section-about .box-img {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+.section-about .box-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.section-about .links {
+    margin-bottom: 0;
+}
+
+/* Section - About */
+
+/* Section - Experience */
+
+.section-experience {
+    background-color: #E0E2DB;
+    padding: 0 0 50px;
+}
+
+.section-experience .box-1 {
+    margin-bottom: 0 !important;
+}
+
+/* Section - Experience */
+
+/* Section - Skills */
+
+.section-skills {
+    background-color: #E0E2DB;
+    padding: 0 0 50px;
+}
+
+.section-skills ul {
+    display: inline-flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.section-skills ul li {
+    align-items: center;
+    background: #E0E2DB;
+    border-radius: 6px;
+    color: #2E3532;
+    display: flex;
+    font-size: .8rem;
+    font-weight: 500;
+    gap: 4px;
+    padding: .3rem .6rem;
+}
+
+.section-skills img {
+    width: 30px;
+}
+
+/* .section-skills .badge-custom {
+    display: inline-block;
+    background-color: #E0E2DB;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 10px;
+    color: #2E3532;
+    font-weight: 600;
+} */
+
+/* Section - Skills */

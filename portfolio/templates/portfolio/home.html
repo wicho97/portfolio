@@ -1,5 +1,7 @@
 {% extends 'portfolio/layout.html' %}
 
+{% load static %}
+
 {% block title %}
     Portfolio - Home
 {% endblock %}
@@ -42,12 +44,78 @@
                                 <div class="col-6">
                                     <div class="box-img">
                                         {% if project.image %}
-                                            <img src="{{ project.image.url }}" alt="{{ project.image.name|cut:'portfolio/' }}">
+                                            <img src="{{ project.image.url }}" alt="project-image">
                                         {% endif %}
                                     </div>
                                 </div>
                             </div>
                         {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-experience">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="section-title">Experiencia</h1>
+                </div>
+                <div class="col-md-12">
+                    <div class="box-width">
+                        <div class="row box-1 m-0">
+                            <div class="col-md-12">
+                                <div class="box-content">
+                                    <h1 class="title-1">Desarrollador Full-Stack</h1>
+                                    <p class="technologies">Orange 612</p>
+                                    <div class="description-1">
+                                        <p>Descripción del Puesto:</p>
+                                        <ul>
+                                            <li>Desarrollo de aplicaciones web usando WordPress.</li>
+                                            <li>Maquetación de proyectos usando HTML, CSS y JavaScript.</li>
+                                            <li>Desarrollo de aplicaciones web usando WordPress y Django.</li>
+                                            <li>Desarrollo de aplicaciones de e-commerce usando WordPress y WooCommerce.
+                                            </li>
+                                            <li>Manejo de operaciones y despliegue de aplicaciones.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-skills">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="section-title">Habilidades</h1>
+                </div>
+                <div class="col-md-12">
+                    <div class="box-width">
+                        <div class="row box-1 m-0">
+                            <div class="col-md-12">
+                                <div class="box-content">
+                                    <div class="description-1">
+                                        {% if technologies %}
+                                        <ul class="m-0 p-0">
+                                            {% for technology in technologies %}
+                                            <li>
+                                                <img src="{{ technology.icon.url }}" alt="skill-icon">
+                                                {{ technology.name }}
+
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
