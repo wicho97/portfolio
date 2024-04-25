@@ -36,20 +36,11 @@ class Project(TimestampMixin, models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField(max_length=250)
     image = models.ImageField(upload_to="portfolio/%Y/%m/%d", blank=True)
+    demo = models.URLField(blank=True)
+    github = models.URLField(blank=True)
     technologies = models.ManyToManyField(
         Technology, related_name="projects", blank=True
     )
 
     def __str__(self):
         return self.title
-
-
-class Link(CustomModel):
-    url = models.URLField(max_length=200)
-    project = models.ForeignKey(
-        Project, on_delete=models.CASCADE, related_name="links", default=None
-    )
-
-    class Meta:
-        verbose_name = "Link"
-        verbose_name_plural = "Links"
