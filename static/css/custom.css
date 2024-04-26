@@ -57,7 +57,7 @@
 
 .links {
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 1rem;
 }
 
 .links a {
@@ -419,6 +419,25 @@
 
 .section-experience .box-1 {
     margin-bottom: 0 !important;
+}
+
+.section-experience .box-width .col-md-12 {
+    margin-bottom: 30px;
+}
+
+.section-experience .box-width .col-md-12:nth-child(2n) {
+    margin-bottom: 0;
+}
+
+.section-experience .company {
+    margin-bottom: 0;
+    font-weight: 700;
+    color: #E0E2DB;
+}
+
+.section-experience .the_year {
+    color: #D2D4C8;
+    text-transform: lowercase;
 }
 
 /* Section - Experience */

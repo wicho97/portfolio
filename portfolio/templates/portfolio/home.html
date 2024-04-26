@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block title %}
-    Portfolio - Home
+    Portfolio - Inicio
 {% endblock %}
 
 {% block content %}
@@ -63,7 +63,7 @@
                                             </div>
                                         {% endif %}
                                         {% if project.technologies.all %}
-                                            <p class="technologies">Technologies:
+                                            <p class="technologies">Tecnologias:
                                                 {% for technology in project.technologies.all %}
                                                     {{ technology.name }}
                                                     {% if not forloop.last %}, {% endif %}
@@ -96,23 +96,18 @@
                 <div class="col-md-12">
                     <div class="box-width">
                         <div class="row box-1 m-0">
-                            <div class="col-md-12">
-                                <div class="box-content">
-                                    <h1 class="title-1">Desarrollador Full-Stack</h1>
-                                    <p class="technologies">Orange 612</p>
-                                    <div class="description-1">
-                                        <p>Descripción del Puesto:</p>
-                                        <ul>
-                                            <li>Desarrollo de aplicaciones web usando WordPress.</li>
-                                            <li>Maquetación de proyectos usando HTML, CSS y JavaScript.</li>
-                                            <li>Desarrollo de aplicaciones web usando WordPress y Django.</li>
-                                            <li>Desarrollo de aplicaciones de e-commerce usando WordPress y WooCommerce.
-                                            </li>
-                                            <li>Manejo de operaciones y despliegue de aplicaciones.</li>
-                                        </ul>
+                            {% for experience in experiences %}
+                                <div class="col-md-12">
+                                    <div class="box-content">
+                                        <h1 class="title-1">{{ experience.title }}</h1>
+                                        <p class="company">{{ experience.company }}</p>
+                                        <p class="the_year">{{ experience.the_year }}</p>
+                                        <div class="description-1">
+                                            {{ experience.description|safe }}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>

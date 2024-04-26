@@ -1,5 +1,9 @@
 from django.db import models
 
+
+from django_ckeditor_5.fields import CKEditor5Field
+
+
 # Create your models here.
 
 
@@ -41,6 +45,16 @@ class Project(TimestampMixin, models.Model):
     technologies = models.ManyToManyField(
         Technology, related_name="projects", blank=True
     )
+
+    def __str__(self):
+        return self.title
+
+
+class Experience(TimestampMixin, models.Model):
+    title = models.CharField(max_length=100)
+    company = models.CharField(max_length=50)
+    description = CKEditor5Field(config_name="extends")
+    the_year = models.CharField(max_length=50)
 
     def __str__(self):
         return self.title

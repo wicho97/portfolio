@@ -2,6 +2,7 @@ asgiref==3.8.1
 black==24.3.0
 click==8.1.7
 Django==5.0.3
+django-ckeditor-5==0.2.12
 djhtml==3.0.6
 mypy-extensions==1.0.0
 packaging==24.0
