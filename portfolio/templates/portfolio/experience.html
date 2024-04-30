@@ -1,0 +1,27 @@
+<section class="section-experience" id="experience">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="section-title">Experiencia</h1>
+            </div>
+            <div class="col-md-12">
+                <div class="box-width">
+                    <div class="row box-1 m-0">
+                        {% for experience in experiences %}
+                            <div class="col-md-12">
+                                <div class="box-content">
+                                    <h1 class="title-1">{{ experience.title }}</h1>
+                                    <p class="company">{{ experience.company }}</p>
+                                    <p class="the_year">{{ experience.the_year }}</p>
+                                    <div class="description-1">
+                                        {{ experience.description|safe }}
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -109,7 +109,7 @@
 .nav-header .menu-content li {
     float: left;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 800;
     margin: 30px 15px;
 }
 
@@ -298,13 +298,14 @@
 
 .section-home .social-links a {
     text-decoration: none;
-    color: transparent;
     margin: 0 10px;
+    color: #FFFFFF;
+    transition: all 0.5s;
 }
 
-.section-home .social-links img {
-    width: 30px;
-    height: 30px;
+.section-home .social-links a:hover {
+    color: #8B2635;
+    transition: all 0.5s;
 }
 
 /* Section - Home */
@@ -384,7 +385,11 @@
 
 .section-about {
     background-color: #E0E2DB;
-    padding: 50px 0 0;
+    padding: 50px 0;
+}
+
+.section-about .box-1 {
+    margin-bottom: 0 !important;
 }
 
 .section-about .main-title {
@@ -409,6 +414,16 @@
 }
 
 /* Section - About */
+
+/* Responsive - Section Project */
+
+@media (max-width: 767px) {
+    .section-about .box-img {
+        margin-bottom: 30px;
+    }
+}
+
+/* Responsive - Section Project */
 
 /* Section - Experience */
 

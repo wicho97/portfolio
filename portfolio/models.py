@@ -36,9 +36,27 @@ class Technology(CustomModel):
         verbose_name_plural = "Technologies"
 
 
+class Information(models.Model):
+    name_complete = models.CharField(max_length=100, blank=True, null=True)
+    avatar = models.ImageField(upload_to="avatar/", blank=True, null=True)
+    about = CKEditor5Field(config_name="extends")
+    cv = models.FileField(upload_to="cv/", blank=True, null=True)
+
+    def __str__(self):
+        return self.name_complete
+
+
+class Social(TimestampMixin, models.Model):
+    github = models.URLField(blank=True, null=True)
+    linkedin = models.URLField(blank=True, null=True)
+    facebook = models.URLField(blank=True, null=True)
+    twitter = models.URLField(blank=True, null=True)
+    instagram = models.URLField(blank=True, null=True)
+
+
 class Project(TimestampMixin, models.Model):
     title = models.CharField(max_length=100)
-    description = models.TextField(max_length=250)
+    description = CKEditor5Field(config_name="extends")
     image = models.ImageField(upload_to="portfolio/%Y/%m/%d", blank=True)
     demo = models.URLField(blank=True)
     github = models.URLField(blank=True)

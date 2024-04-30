@@ -1,0 +1,32 @@
+<section class="section-skills" id="skills">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="section-title">Habilidades</h1>
+            </div>
+            <div class="col-md-12">
+                <div class="box-width">
+                    <div class="row box-1 m-0">
+                        <div class="col-md-12">
+                            <div class="box-content">
+                                <div class="description-1">
+                                    {% if technologies %}
+                                        <ul class="m-0 p-0">
+                                            {% for technology in technologies %}
+                                                <li>
+                                                    <img src="{{ technology.icon.url }}" alt="skill-icon">
+                                                    {{ technology.name }}
+
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

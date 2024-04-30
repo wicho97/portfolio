@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Technology, Project, Experience
+from .models import Technology, Project, Experience, Information, Social
 
 # Register your models here.
 
@@ -17,4 +17,14 @@ class ProjectAdmin(admin.ModelAdmin):
 
 @admin.register(Experience)
 class ExperienceAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(Information)
+class InformationAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(Social)
+class SocialAdmin(admin.ModelAdmin):
     pass

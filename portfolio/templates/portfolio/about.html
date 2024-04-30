@@ -1,0 +1,30 @@
+<section class="section-about" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="section-title">Sobre mi</h1>
+            </div>
+            <div class="col-md-12">
+                <div class="box-width">
+                    <div class="row box-1 m-0">
+                        <div class="col-md-6">
+                            <div class="box-img">
+                                <img src="{{ information.avatar.url }}" alt="avatar">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="box-content align-middle">
+                                <div class="description-1">
+                                    {{ information.about|safe }}
+                                </div>
+                                <div class="links">
+                                    <a href="{{ information.cv.url }}" class="button-1" target="_blank">Descargar CV</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
